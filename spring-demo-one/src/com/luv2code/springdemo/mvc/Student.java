@@ -7,6 +7,9 @@ private String firstName;
 private String lastName;
 private String country;
 private LinkedHashMap<String, String> countryOptions;
+private String favouriteLanguage;
+private String[] operatingSystems;
+
 
 public Student() {
 	countryOptions=new LinkedHashMap<>();
@@ -14,7 +17,31 @@ public Student() {
 	countryOptions.put("DE", "Denmark");
 	countryOptions.put("BR", "Brazil");
 	countryOptions.put("FR", "France");
+	countryOptions.put("US", "United States of America");
 }
+
+
+
+public String[] getOperatingSystems() {
+	return operatingSystems;
+}
+
+
+
+public void setOperatingSystems(String[] operatingSystems) {
+	this.operatingSystems = operatingSystems;
+}
+
+
+
+public String getFavouriteLanguage() {
+	return favouriteLanguage;
+}
+
+public void setFavouriteLanguage(String favouriteLanguage) {
+	this.favouriteLanguage = favouriteLanguage;
+}
+
 public String getCountry() {
 	return country;
 }
