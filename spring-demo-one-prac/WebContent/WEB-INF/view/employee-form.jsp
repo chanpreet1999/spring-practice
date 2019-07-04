@@ -8,7 +8,6 @@
 .error{color: red}
 </style>
 </head>
-
 <body>
 
 <i>Fields marked with (*) are mandatory</i>
@@ -17,10 +16,15 @@
 <form:form action="processEmployee" modelAttribute="employee">
 
 First Name:<form:input path="firstName" />
+<form:errors path="firstName" cssClass="error" />
 <br><br>
 
 Last Name:(*)<form:input path="lastName" />
 <form:errors path="lastName" cssClass="error" />
+<br><br>
+
+Free Passes:<form:input path="freePasses" />
+<form:errors path="freePasses" cssClass="error" />
 <br><br>
 
 <!-- dropdown menu -->
@@ -43,11 +47,18 @@ Mac<form:checkbox path="operatingSystems" value="MacOS" />
 Linux<form:checkbox path="operatingSystems" value="Linux" />
 <br><br>
 
+Phone Number: <form:input path="phno" />
+<form:errors path="phno" cssClass="error" />
+<br><br>
+
+Course:<form:input path="courseCode" />
+<form:errors path="courseCode" cssClass="error" />
+<br><br>
+
 <input type="submit" value="Submit" />
 <br><br>
 
 </form:form>
 
 </body>
-
 </html>
