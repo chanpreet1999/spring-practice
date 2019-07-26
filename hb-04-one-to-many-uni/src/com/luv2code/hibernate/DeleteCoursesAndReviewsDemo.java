@@ -27,7 +27,7 @@ public class DeleteCoursesAndReviewsDemo {
 			session.beginTransaction();
 			
 			//get course from id
-			int theId=10;
+			int theId=1;
 			Course tempCourse=session.get(Course.class,theId);
 			
 			//print the course
