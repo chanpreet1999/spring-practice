@@ -1,3 +1,4 @@
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -14,12 +15,18 @@
 
 </head>
 <body>
+
 	
 	<div id="wrapper">
 		<div id="header">
 			<h2>Customer Relationship Manager-CRM</h2>
 		</div>	
 	</div>
+	<br>
+	<form:form action="search" method="POST">
+	Search a customer:<input type="text" name="theSearchName"/> 
+	<input type="submit" value="Search" class="add-button"/>
+	</form:form>
 	
 	<div id="container">
 		<div id="content">

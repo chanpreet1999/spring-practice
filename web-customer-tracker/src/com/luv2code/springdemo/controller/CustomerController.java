@@ -64,4 +64,14 @@ public class CustomerController {
 		customerService.delete(theId);
 		return "redirect:/customer/list";
 	}
+	
+	@PostMapping("/search")
+	public String searchCustomers(@RequestParam("theSearchName") String theSearchName ,Model theModel){
+		
+		List<Customer> customerList=customerService.search(theSearchName);
+		
+		theModel.addAttribute("customers", customerList);
+		
+		return "list-customers";
+	}
 }
