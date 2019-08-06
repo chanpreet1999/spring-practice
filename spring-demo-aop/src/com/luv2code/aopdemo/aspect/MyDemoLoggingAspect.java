@@ -8,7 +8,11 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class MyDemoLoggingAspect {
 
-	@Before("execution(public void addAccount())")
+	//@Before("execution( * add*())") any return type,called whenever any fuction starting with add is called
+	
+	//@Before("execution(* add*(com.luv2code.aopdemo.Account, ..))") //first parameter is object of class account followed by any no of parameters
+	
+	@Before("execution(* com.luv2code.aopdemo.dao.*.*(..))") //all methods on dao package
 	private void beforeAddAccountAdvice() {
 		System.out.println("=====> Executing @Before advice on addAccount()");
 
